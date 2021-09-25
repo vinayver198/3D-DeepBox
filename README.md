@@ -40,6 +40,16 @@ The dataset should be stored in following structure :
           |__image_2
           |__label_2
  ```
+ 
+ Every image has its corresponding image files and the detailed description of label file can found below 
+ 
+ | Key       	| Values 	| Description                                                                                                           	|
+|-----------	|--------	|-----------------------------------------------------------------------------------------------------------------------	|
+| type      	| 1      	| String describing the type of object: [Car, Van, Truck, Pedestrian,Person_sitting, Cyclist, Tram, Misc or DontCare]   	|
+| truncated 	| 1      	| Float from 0 (non-truncated) to 1 (truncated), where truncated refers to the object leaving image boundaries          	|
+| occluded  	| 1      	| Integer (0,1,2,3) indicating occlusion state:  0 = fully visible 1 = partly occluded 2 = largely occluded 3 = unknown 	|
+| alpha     	| 1      	| Observation angle of object ranging from [-pi, pi]                                                                    	|
+| bbox      	| 4      	| 2D bounding box of object in the image (0-based index): contains left, top, right, bottom pixel coordinates           	|
           
 ## Environment Setup
 
